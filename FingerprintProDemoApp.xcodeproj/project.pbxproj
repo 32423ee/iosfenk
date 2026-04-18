@@ -57,7 +57,7 @@
 				01A0B9FA7B18B7B3D0A2F001 /* FingerprintProService.swift */,
 				01A0B9FC7B18B7B3D0A2F001 /* Info.plist */,
 			);
-			path = ..;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
