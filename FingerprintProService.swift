@@ -2,14 +2,15 @@ import Foundation
 import FingerprintPro
 
 final class FingerprintProService {
-    private let client: FingerprintProClient
+    private let apiKey: String
 
     init(apiKey: String) {
-        let configuration = Configuration(apiKey: apiKey)
-        self.client = FingerprintProFactory.getInstance(configuration)
+        self.apiKey = apiKey
     }
 
     func getVisitorId() async throws -> String {
-        try await client.getVisitorId()
+        let configuration = Configuration(apiKey: apiKey)
+        let client = FingerprintProFactory.getInstance(configuration)
+        return try await client.getVisitorId()
     }
 }
